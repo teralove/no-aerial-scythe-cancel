@@ -3,7 +3,7 @@ const LOCK_TIME = 350; //may need to be adjusted for ping (and aspd?)
 
 module.exports = function NoAerialScytheCancel(dispatch) {
     let job = -1,
-    locked = false,
+    locked = false;
     
     dispatch.hook('S_LOGIN', 9, event => { job = event.templateId % 100 - 1; })
     
